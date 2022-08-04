@@ -180,7 +180,7 @@ const updateUI = acc => {
 const startLogout = () => {
   labelTimer.textContent = ``;
 
-  let time = 10;
+  let time = 120;
   const tick = () => {
     time--;
 
