@@ -43,8 +43,24 @@ const account2 = {
   currency: 'EUR',
   locale: 'pt-PT',
 };
+const account3 = {
+  owner: 'John Watson',
+  movements: [3400, -150, -790, -3210, -1000, 8500],
+  interestRate: 1.5,
+  pin: 3333,
+  movementsDates: [
+    '2019-12-23T07:42:02.178Z',
+    '2020-01-28T09:15:04.908Z',
+    '2020-04-01T10:17:24.185Z',
+    '2020-05-08T14:11:59.604Z',
+    '2020-05-27T17:01:17.194Z',
+    '2020-07-11T23:36:17.929Z',
+  ],
+  currency: 'EUR',
+  locale: 'pt-PT',
+};
 
-const accounts = [account1, account2];
+const accounts = [account1, account2, account3];
 
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -224,6 +240,10 @@ btnLogin.addEventListener('click', e => {
       currentAccount.owner.split(' ')[0]
     }`;
     containerApp.style.opacity = 1;
+    containerApp.style.display = 'grid';
+    containerApp.style.gridTemplateColumns = ' 4fr 3fr';
+    containerApp.style.gridTemplateRows = 'auto repeat(3, 15rem) auto';
+    containerApp.style.gap = ' 2rem';
 
     const now = new Date();
 

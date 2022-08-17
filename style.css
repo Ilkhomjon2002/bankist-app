@@ -92,10 +92,32 @@ nav {
   grid-template-columns: 4fr 3fr;
   grid-template-rows: auto repeat(3, 15rem) auto;
   gap: 2rem;
-
+  display: none;
   /* NOTE This creates the fade in/out anumation */
   opacity: 0;
   transition: all 1s;
+}
+.documentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 30rem;
+  width: 80rem;
+  margin: 0 auto;
+  background-color: #39b385;
+  border-radius: 5rem;
+  color: #eee;
+  margin-top: 5rem;
+}
+.documentation-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+}
+.documentation-box p {
+  font-size: 1.5rem;
 }
 
 .balance {
